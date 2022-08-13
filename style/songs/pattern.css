@@ -1,0 +1,390 @@
+@import url(../nullstyle.css);
+@import url("https://fonts.googleapis.com/css2?family=Imperial+Script&family=Montserrat:wght@400;500;600;800&display=swap");
+@import url(../patterns/header.css);
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: linear-gradient(to top, white, rgba(0, 143, 107, 0.1)) no-repeat;
+}
+
+body, html {
+  height: 100%;
+}
+
+._container {
+  padding: 0 20px;
+  max-width: 1209px;
+  margin: 0 auto;
+}
+
+@media (max-width: 1024px) {
+  ._container {
+    max-width: 768px;
+  }
+}
+
+.active {
+  color: #FCC028;
+}
+
+.active:hover {
+  color: #ffdb82;
+}
+
+h1 {
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 1;
+}
+
+@media (max-width: 1024px) {
+  h1 {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 375px) {
+  h1 {
+    font-size: 20px;
+  }
+}
+
+.button {
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 22/15;
+  padding: 10px 30px;
+  border-radius: 5px;
+}
+
+.up-arrow {
+  position: fixed;
+  bottom: 30px;
+  right: 20px;
+}
+
+.up-arrow img {
+  width: 70px;
+  transition: all 0.5s ease 0s;
+}
+
+.up-arrow img:hover {
+  transform: scale(1.2, 1.2);
+}
+
+@media (min-width: 550px) {
+  .up-arrow {
+    left: 80px;
+  }
+}
+
+.main .title {
+  margin-bottom: 20px;
+}
+
+.main .main-container {
+  display: flex;
+}
+
+.main .main-container .main-nav {
+  font-weight: 500;
+  font-size: 14px;
+  margin-top: 90px;
+  flex: 0 0 23%;
+}
+
+@media (max-width: 1024px) {
+  .main .main-container .main-nav {
+    flex: 0 0 30%;
+  }
+}
+
+@media (max-width: 768px) {
+  .main .main-container .main-nav {
+    flex: 0 0 40%;
+  }
+}
+
+@media (max-width: 550px) {
+  .main .main-container .main-nav {
+    margin-left: 20px;
+    width: 81%;
+    position: absolute;
+    top: 10px;
+    background: rgba(255, 255, 255, 0.9);
+    left: 0;
+  }
+}
+
+.main .main-container .main-nav .main-nav-list {
+  border: 1px solid black;
+  margin-right: 60px;
+  padding-left: 20px;
+  border-radius: 20px;
+}
+
+@media (max-width: 550px) {
+  .main .main-container .main-nav .main-nav-list {
+    font-size: 32px;
+    font-weight: 700;
+    width: 100%;
+    border: none;
+    display: none;
+  }
+}
+
+@media (max-width: 425px) {
+  .main .main-container .main-nav .main-nav-list {
+    font-size: 25px;
+  }
+}
+
+.main .main-container .main-nav .main-nav-list .main-nav-list-item {
+  transition: all 0.5s ease 0s;
+}
+
+.main .main-container .main-nav .main-nav-list .main-nav-list-item:hover {
+  font-size: 20px;
+  color: #008f6b;
+}
+
+@media (max-width: 550px) {
+  .main .main-container .main-nav .main-nav-list .main-nav-list-item:hover {
+    font-size: 40px;
+  }
+}
+
+.main .main-container .main-nav .main-nav-list .main-nav-list-item:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+@media (max-width: 550px) {
+  .main .main-container .main-nav .main-nav-list .main-nav-list-item:not(:last-child) {
+    margin-bottom: 15px;
+  }
+}
+
+.main .main-container .main-nav .visible.main-nav-list {
+  display: block;
+}
+
+.main .main-container .main-content {
+  flex: 0 0 54%;
+}
+
+@media (max-width: 1024px) {
+  .main .main-container .main-content {
+    flex: 0 0 40%;
+  }
+}
+
+@media (max-width: 768px) {
+  .main .main-container .main-content {
+    flex: 0 0 60%;
+  }
+}
+
+@media (max-width: 550px) {
+  .main .main-container .main-content {
+    flex: 0 0 100%;
+  }
+}
+
+.main .main-container .main-content .searcherNav {
+  display: flex;
+}
+
+.main .main-container .main-content .searcherNav .main-content-searcher {
+  flex: 0 0 80%;
+}
+
+.main .main-container .main-content .searcherNav .main-content-searcher input[type=text] {
+  width: 100%;
+  height: 30px;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.main .main-container .main-content .searcherNav .menu-arrow {
+  display: block;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  transform: matrix(2, 0, 0, -2, 0, 0);
+  border-top: 10px solid black;
+  width: 0;
+  height: 0;
+  transition: transform 0.5s ease 0s;
+  margin: 10px 0 0 20px;
+}
+
+@media (min-width: 550px) {
+  .main .main-container .main-content .searcherNav .menu-arrow {
+    display: none;
+  }
+}
+
+.main .main-container .main-content .searcherNav .visible.menu-arrow {
+  transform: matrix(2, 0, 0, 2, 0, 0);
+}
+
+.main .main-container .main-content .main-content-text {
+  line-height: 1.5;
+}
+
+@media (max-width: 1024px) {
+  .main .main-container .main-content .main-content-text {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 550px) {
+  .main .main-container .main-content .main-content-text {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 450px) {
+  .main .main-container .main-content .main-content-text {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 375px) {
+  .main .main-container .main-content .main-content-text {
+    font-size: 11px;
+  }
+}
+
+.main .main-container .main-content .main-content-text .chord {
+  position: absolute;
+  margin-top: -20px;
+  display: inline-block;
+  font-weight: 600;
+}
+
+@media (max-width: 1024px) {
+  .main .main-container .main-content .main-content-text .chord {
+    margin-top: -15px;
+  }
+}
+
+@media (max-width: 550px) {
+  .main .main-container .main-content .main-content-text .chord {
+    margin-top: -20px;
+  }
+}
+
+@media (max-width: 375px) {
+  .main .main-container .main-content .main-content-text .chord {
+    margin-top: -15px;
+  }
+}
+
+.main .main-container .main-content .main-content-text .chord.C::before {
+  content: 'C';
+}
+
+.main .main-container .main-content .main-content-text .chord.Cd::before {
+  content: 'C#';
+}
+
+.main .main-container .main-content .main-content-text .chord.D::before {
+  content: 'D';
+}
+
+.main .main-container .main-content .main-content-text .chord.Dd::before {
+  content: 'D#';
+}
+
+.main .main-container .main-content .main-content-text .chord.E::before {
+  content: 'E';
+}
+
+.main .main-container .main-content .main-content-text .chord.F::before {
+  content: 'F';
+}
+
+.main .main-container .main-content .main-content-text .chord.Fd::before {
+  content: 'F#';
+}
+
+.main .main-container .main-content .main-content-text .chord.G::before {
+  content: 'G';
+}
+
+.main .main-container .main-content .main-content-text .chord.Gd::before {
+  content: 'G#';
+}
+
+.main .main-container .main-content .main-content-text .chord.A::before {
+  content: 'A';
+}
+
+.main .main-container .main-content .main-content-text .chord.Bb::before {
+  content: 'Bb';
+}
+
+.main .main-container .main-content .main-content-text .chord.H::before {
+  content: 'H';
+}
+
+.main .main-container .main-content .main-content-buttons {
+  margin-bottom: 25px;
+  display: flex;
+}
+
+@media (max-width: 1024px) {
+  .main .main-container .main-content .main-content-buttons {
+    display: block;
+  }
+}
+
+.main .main-container .main-content .main-content-buttons .main-content-buttons-tone, .main .main-container .main-content .main-content-buttons .main-content-buttons-scroll {
+  display: flex;
+}
+
+@media (max-width: 1024px) {
+  .main .main-container .main-content .main-content-buttons .main-content-buttons-tone, .main .main-container .main-content .main-content-buttons .main-content-buttons-scroll {
+    margin-bottom: 5px;
+  }
+}
+
+.main .main-container .main-content .main-content-buttons .main-content-buttons-tone .tone-plus img, .main .main-container .main-content .main-content-buttons .main-content-buttons-scroll .tone-plus img {
+  width: 20px;
+}
+
+.main .main-container .main-content .main-content-buttons .main-content-buttons-tone .tone-counter, .main .main-container .main-content .main-content-buttons .main-content-buttons-scroll .tone-counter {
+  padding: 0 10px;
+  padding-top: 3.5px;
+}
+
+.main .main-container .main-content .main-content-buttons .main-content-buttons-tone .tone-minus img, .main .main-container .main-content .main-content-buttons .main-content-buttons-scroll .tone-minus img {
+  width: 20px;
+}
+
+.main .main-container .main-content .main-content-buttons .main-content-buttons-scroll {
+  margin-right: 25px;
+}
+
+.main .main-container .main-guitar {
+  margin-top: 60px;
+  flex: 0 0 23%;
+}
+
+@media (max-width: 1024px) {
+  .main .main-container .main-guitar {
+    flex: 0 0 30%;
+  }
+}
+
+@media (max-width: 768px) {
+  .main .main-container .main-guitar {
+    display: none;
+  }
+}
+
+.main .main-container .main-guitar img {
+  width: 100%;
+}
