@@ -1,0 +1,212 @@
+@import url(../nullstyle.css);
+@import url('https://fonts.googleapis.com/css2?family=Imperial+Script&family=Montserrat:wght@400;500;600;800&display=swap');
+@import url(../patterns/header.css);
+body {
+    font-family: 'Montserrat';
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.5;
+    color: black;
+    a{
+        color: inherit;
+    }
+}
+._container {
+    padding: 0 20px;
+    max-width: 1209px;
+    margin: 0 auto;
+    @media (max-width:1024px){
+        max-width: 768px;
+    }
+}
+.active {
+    color:#FCC028;
+}
+h1 {
+    font-weight: 600;
+    font-size: 73px;
+    line-height: 1;
+    @media (max-width: 1024px){
+        font-size: 50px;
+    }
+    @media (max-width: 375px){
+        font-size: 40px;
+    }
+}
+.button {
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 22/15;
+    padding: 10px 30px;
+    border-radius: 5px;
+}
+.new{
+    display: none;
+    @media (max-width: 1024px){
+        display: block;
+    }
+}
+.header {
+    background: linear-gradient(to top, white, rgba(0, 143, 107,0.1));
+    & .header-container {
+        .header-content {
+            display: flex;
+            @media (max-width: 1024px){
+                flex-direction: column;
+            }
+            & .header-content-descr {
+                flex: 0 1 auto;
+                margin-top: 100px;
+                @media (max-width: 1024px){
+                    margin-top: 50px;
+                }
+                & .descr-hello {
+                    color: #008f6b;
+                }
+                & .descr-yaroslav {
+                    margin: 7px 0 0 -5px;
+                }
+                & .descr-position {
+                    margin: 20px 0 0 0;
+                    color: #FCC028;
+                    @media (max-width: 1024px){
+                        display: none;
+                    }
+                }
+                & .discr-text {
+                    margin: 5px 0 0 0;
+                    opacity: 0.5;
+                    @media (max-width: 1024px){
+                        display: none;
+                    }
+                }
+                & .discr-buttons {
+                    display: flex;
+                    margin: 36px 0 0 0;
+                    @media (max-width: 1024px){
+                        display: none;
+                    }
+                    & .discr-buttons-link {
+                        background-color: #008f6b;
+                        color: #FFFFFF;
+                        transition: all 0.5s ease 0s;
+                        &:hover{
+                            background-color: #FCC028;
+                        }
+                    }
+                    & .discr-buttons-test {
+                        font-weight: 600;
+                        position: relative;
+                        transition: all 0.5s ease 0s;
+                        &:hover{
+                            color:  #FCC028;
+                        }
+                        & img {
+                            position: absolute;
+                            width: 25px;
+                            left: 140px;
+                        }
+                        }
+                    }
+                }
+            }
+            & .header-content-image {
+                flex: 1 0 50%;
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                & img {
+                    width: 500px;
+                    @media (max-width: 1024px){
+                        width: 100%;
+                    }
+                }
+            }
+            & .hidden{
+                & .descr-position {
+                    display:none;
+                    margin: 20px 0 0 0;
+                    color: #FCC028;
+                    @media (max-width: 1024px){
+                        display: block;
+                    }
+                }
+                & .discr-text {
+                    display: none;
+                    margin: 5px 0 0 0;
+                    opacity: 0.5;
+                    @media (max-width: 1024px){
+                        display: block;
+                    }
+                }
+                & .discr-buttons {
+                    display: none;
+                    margin: 36px 0 30px 0;
+                    @media (max-width: 1024px){
+                        display: flex;
+                        justify-content: space-around;
+                    }
+                    @media (max-width: 550px){
+                        flex-direction: column;
+                    }
+                    & .discr-buttons-link {
+                        background-color: #008f6b;
+                        color: #FFFFFF;
+                        font-weight: 800;
+                        font-size: 25px;
+                        line-height: 22/15;
+                        padding: 20px 40px;
+                        border-radius: 5px;
+                        @media(max-width: 768px) {
+                            padding: 15px 30px;
+                        }
+                        @media (max-width: 550px){
+                            text-align: center;
+                            padding: 15px 5px;
+                        }
+                        transition: all 0.5s ease 0s;
+                        &:hover {
+                            background-color: #FCC028;
+                        }
+                        }
+                    & .discr-buttons-test {
+                        font-weight: 800;
+                        position: relative;
+                        font-size: 25px;
+                        line-height: 22/15;
+                        padding: 20px 50px;
+                        border-radius: 5px;
+                        border: 1px solid black;
+                        @media(max-width: 768px) {
+                            padding: 15px 30px;
+                        }
+                        @media (max-width: 550px){
+                            text-align: center;
+                            padding: 15px 5px;
+                            margin-top: 10px;
+                        }
+                        & span{
+                            display: inline-block;
+                            padding-right: 30px;
+                            @media(max-width: 768px) {
+                                padding-right: 0;
+                            }
+                        }
+                        & img {
+                            @media(max-width: 768px) {
+                                display: none;
+                            }
+                            position: absolute;
+                            width: 40px;
+                            left: 230px;
+                        }
+                        transition: all 0.5s ease 0s;
+                        &:hover {
+                            background-color: #000000;
+                            color: white;
+                        }
+                        }
+                    }
+            }
+        }   
+    }   
